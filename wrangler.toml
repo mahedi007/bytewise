@@ -10,4 +10,4 @@ ADMIN_EMAILS = "mahedi.pro@gmail.com"
 [[d1_databases]]
 binding = "DB"
 database_name = "bytequest-db"
-database_id = "PASTE-YOUR-D1-DATABASE-ID-HERE"
+database_id = "c5237759-938e-4494-bd43-f1698b493483"
