@@ -1,4 +1,4 @@
-# ByteQuest: coding quests for Cambridge students (PG → O Level)
+# ByteWise: coding quests for Cambridge students (PG → O Level)
 
 A gamified coding platform for one teacher. It includes free and paid courses for each class band, Python and web code that runs in the browser, XP, streaks, badges and a leaderboard, bKash/Nagad course unlocks, online and onsite tuition booking, and an admin panel ("Teacher HQ") where you write lessons without touching code.
 
