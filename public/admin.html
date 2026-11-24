@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fff6e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<title>Admin · ByteQuest</title>
+<meta name="robots" content="noindex">
+<script src="/vendor/marked.min.js"></script>
+<script src="/vendor/purify.min.js"></script>
+</head>
+<body>
+<div id="app-nav"></div>
+<main class="wrap" style="padding:36px 0 60px">
+  <div class="row" style="margin-bottom:18px">
+    <h1 style="font-size:2.4rem;margin:0">Teacher HQ 🛠️</h1>
+    <span class="spacer"></span>
+    <a class="btn btn-sm btn-white" href="/" target="_blank">View site ↗</a>
+  </div>
+  <div class="admin-tabs" id="tabs">
+    <button data-tab="overview" class="on">📊 Overview</button>
+    <button data-tab="payments">💰 Payments <span class="count hide" id="cPay"></span></button>
+    <button data-tab="bookings">🎟️ Tuition requests <span class="count hide" id="cBook"></span></button>
+    <button data-tab="students">👩‍🎓 Students</button>
+    <button data-tab="lessons">📚 Lessons</button>
+    <button data-tab="courses">🗂️ Courses &amp; prices</button>
+    <button data-tab="settings">⚙️ Site settings</button>
+  </div>
+  <div id="panel"><div class="spinner"></div></div>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fff6e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<title>Online &amp; Onsite Coding Tuition · ByteQuest</title>
+<meta name="description" content="Live coding and Computer Science tuition for Cambridge students in Bangladesh: online classes or onsite in Dhaka, from PG to O Level 2210.">
+</head>
+<body>
+<div id="app-nav"></div>
+<main>
+  <section class="page-head">
+    <div class="wrap center">
+      <span class="eyebrow">Live classes</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">Learn live with a <span class="highlight-pink highlight">real teacher</span></h1>
+      <p class="muted" style="max-width:640px;margin:0 auto">Small groups or 1:1, matched to your class. Every tuition student gets Pro access to their course, so practice continues between classes.</p>
+    </div>
+  </section>
+
+  <section class="wrap grid grid-2" style="padding-bottom:30px">
+    <div class="card bg-sky">
+      <div style="font-size:2.6rem">💻</div>
+      <h2 style="margin:6px 0">Online</h2>
+      <div class="price">৳<span data-s="online_fee">3,500</span> <small data-s="online_fee_note">per month</small></div>
+      <ul class="check-list">
+        <li>Live on Google Meet or Zoom</li>
+        <li>Screen-share coding, so you never fall behind</li>
+        <li>Class recordings for revision</li>
+        <li>Pro course access included</li>
+      </ul>
+      <button class="btn btn-white" data-pick="online">Book online ➜</button>
+    </div>
+    <div class="card bg-sun">
+      <div style="font-size:2.6rem">🏫</div>
+      <h2 style="margin:6px 0">Onsite</h2>
+      <div class="price">৳<span data-s="onsite_fee">5,000</span> <small data-s="onsite_fee_note">per month</small></div>
+      <ul class="check-list">
+        <li>In person at <span data-s="onsite_location">Dhaka</span></li>
+        <li>Hands-on, laptop-friendly sessions</li>
+        <li>Great for younger learners &amp; exam crunch</li>
+        <li>Pro course access included</li>
+      </ul>
+      <button class="btn btn-white" data-pick="onsite">Book onsite ➜</button>
+    </div>
+  </section>
+
+  <section class="section-sm" id="book">
+    <div class="wrap" style="max-width:820px">
+      <div class="card" style="box-shadow:var(--shadow-lg)">
+        <div id="bookingArea">
+          <h2>Book a trial class 🎟️</h2>
+          <p class="muted">Tell us a little about the student. We'll reply on WhatsApp within 24 hours to fix a time.</p>
+          <form id="bookingForm" novalidate>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="field"><label>Class type</label>
+              <div class="toggle-group">
+                <label><input type="radio" name="mode" value="online" checked><span>💻 Online</span></label>
+                <label><input type="radio" name="mode" value="onsite"><span>🏫 Onsite</span></label>
+              </div>
+            </div>
+            <div class="grid grid-2" style="gap:0 18px">
+              <div class="field"><label for="bkName">Student's name *</label><input class="input" id="bkName" name="student_name" required maxlength="100"></div>
+              <div class="field"><label for="bkClass">Class</label><select class="input" id="bkClass" name="class_level"></select></div>
+              <div class="field"><label for="bkGuardian">Parent / guardian name</label><input class="input" id="bkGuardian" name="guardian_name" maxlength="100"></div>
+              <div class="field"><label for="bkPhone">WhatsApp / phone *</label><input class="input" id="bkPhone" name="phone" inputmode="tel" placeholder="01XXXXXXXXX" required></div>
+              <div class="field"><label for="bkEmail">Email</label><input class="input" id="bkEmail" name="email" type="email"></div>
+              <div class="field"><label for="bkFocus">Focus</label>
+                <select class="input" id="bkFocus" name="focus">
+                  <option>Coding for fun &amp; projects</option>
+                  <option>School Computing / ICT support</option>
+                  <option>O Level CS 2210: full course</option>
+                  <option>O Level CS 2210: exam revision</option>
+                  <option>IGCSE CS 0478</option>
+                  <option>Python programming</option>
+                  <option>Web development (HTML/CSS/JS)</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label>Preferred days</label>
+              <div class="toggle-group" id="bkDays"></div>
+            </div>
+            <div class="field"><label for="bkTime">Preferred time</label>
+              <select class="input" id="bkTime" name="preferred_time">
+                <option>Afternoon (3pm – 6pm)</option><option>Evening (6pm – 9pm)</option><option>Morning (9am – 12pm)</option><option>Flexible</option>
+              </select>
+            </div>
+            <div class="field"><label for="bkMsg">Anything else?</label><textarea class="input" id="bkMsg" name="message" maxlength="1000" placeholder="E.g. exam session, current level, goals…"></textarea></div>
+            <div class="form-error hide" id="bkErr"></div>
+            <button class="btn btn-lg" type="submit" style="width:100%">Send booking request 🚀</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/tuition.js"></script>
+</body>
+</html>

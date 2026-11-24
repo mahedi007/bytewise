@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fff6e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<title>Code Playground · ByteQuest</title>
+<meta name="description" content="Write and run Python or HTML/CSS/JS in your browser. No install needed.">
+<script src="/vendor/marked.min.js"></script>
+<script src="/vendor/purify.min.js"></script>
+</head>
+<body>
+<div id="app-nav"></div>
+<main class="wrap" style="padding:40px 0">
+  <div class="row" style="align-items:flex-end;margin-bottom:10px">
+    <div>
+      <span class="eyebrow">Sandbox mode</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:8px">Code Playground 🧪</h1>
+      <p class="muted" style="margin:0">Real Python and real web code, right in your browser. Your code saves on this device automatically.</p>
+    </div>
+  </div>
+  <div class="pg-tabs" role="tablist" style="margin-top:24px">
+    <button class="on" data-tab="python" role="tab">🐍 Python</button>
+    <button data-tab="web" role="tab">🌐 HTML / CSS / JS</button>
+    <button data-tab="bits" role="tab">💡 Binary &amp; logic</button>
+  </div>
+  <div id="pgPython"></div>
+  <div id="pgWeb" class="hide"></div>
+  <div id="pgBits" class="hide grid grid-2"></div>
+
+  <section style="margin-top:36px">
+    <h2>Challenge cards 🃏</h2>
+    <div class="grid grid-3" id="challenges"></div>
+  </section>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/playground.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fff6e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<title>Quest · ByteQuest</title>
+<meta name="description" content="Interactive coding lesson with quizzes and XP.">
+<script src="/vendor/marked.min.js"></script>
+<script src="/vendor/purify.min.js"></script>
+</head>
+<body>
+<div id="app-nav"></div>
+<main class="wrap" style="padding-top:32px">
+  <div class="crumbs" id="crumbs"><a href="/learn">Courses</a></div>
+  <div class="lesson-layout">
+    <article>
+      <header id="lessonHead"><div class="skeleton" style="height:120px"></div></header>
+      <div id="lessonVideo"></div>
+      <div class="lesson-body" id="lessonBody"><div class="spinner"></div></div>
+      <div id="lessonQuiz"></div>
+      <div id="lessonComplete"></div>
+      <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+    </article>
+    <aside class="lesson-side" id="lessonSide"></aside>
+  </div>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/lesson.js"></script>
+</body>
+</html>

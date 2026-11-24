@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fff6e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<title>ByteQuest · Coding quests for Cambridge students, PG to O Level</title>
+<meta name="description" content="Gamified coding lessons for Cambridge curriculum students in Bangladesh, from Playgroup to O Level Computer Science 2210. Free starter quests, Python in the browser, XP and badges, plus online and onsite tuition.">
+<meta property="og:title" content="ByteQuest · Level up your coding, PG to O Level">
+<meta property="og:description" content="Free coding quests, real Python in the browser, O Level CS 2210 prep, and online/onsite tuition.">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div id="app-nav"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <span class="float" style="top:40px;left:4%">🐍</span>
+    <span class="float" style="bottom:30px;left:40%;animation-delay:-1.5s">⭐</span>
+    <span class="float" style="top:70px;right:3%;animation-delay:-2.5s">💎</span>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Cambridge-aligned · PG ➜ O Level</span>
+        <h1>Learn to code like you're <span class="highlight">levelling&nbsp;up</span> in a game.</h1>
+        <p class="lead">Bite-size coding quests for every class, from the first robot taps in Playgroup to Paper&nbsp;2 in O&nbsp;Level Computer Science. Earn XP, keep your streak, beat the boss level.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-lg" href="/learn">Start free quests 🚀</a>
+          <a class="btn btn-lg btn-white" href="/tuition">Book a class</a>
+        </div>
+        <div class="trust-row">
+          <span class="chip chip-lime">✅ Free starter quests</span>
+          <span class="chip chip-sky">🐍 Real Python, no install</span>
+          <span class="chip chip-violet">🎓 O Level 2210 · IGCSE 0478</span>
+          <span class="chip chip-pink">👩‍🏫 Online &amp; onsite</span>
+        </div>
+      </div>
+
+      <div class="card game-card" aria-hidden="true">
+        <div class="gc-top">
+          <div class="gc-player">
+            <div class="avatar">A</div>
+            <div><b>Ayaan · Class 7</b><div class="small muted">Level 4 · Builder</div></div>
+          </div>
+          <span class="chip chip-sun">🔥 5 days</span>
+        </div>
+        <div class="row small" style="justify-content:space-between;font-weight:800;margin-bottom:6px"><span>⚡ 372 XP</span><span>Level 5 in 28 XP</span></div>
+        <div class="xpbar"><i style="width:72%"></i></div>
+        <div class="gc-quest">
+          <div class="q done"><span class="tick">✓</span>Variables &amp; inputs <span class="spacer"></span><span class="chip">+20</span></div>
+          <div class="q done"><span class="tick">✓</span>If / else decisions <span class="spacer"></span><span class="chip">+25</span></div>
+          <div class="q"><span class="tick">▶</span>Loops: make it repeat <span class="spacer"></span><span class="chip chip-lime">+30</span></div>
+          <div class="q boss"><span class="tick">👾</span>Boss level: build a quiz game <span class="spacer"></span><span class="chip">+80</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Robot mazes</span><span>Scratch-style logic</span><span>Python</span><span>HTML &amp; CSS</span><span>Algorithms</span><span>Binary &amp; hex</span><span>Logic gates</span><span>Pseudocode</span><span>SQL</span><span>O Level 2210</span>
+      <span>Robot mazes</span><span>Scratch-style logic</span><span>Python</span><span>HTML &amp; CSS</span><span>Algorithms</span><span>Binary &amp; hex</span><span>Logic gates</span><span>Pseudocode</span><span>SQL</span><span>O Level 2210</span>
+    </div>
+  </div>
+
+  <!-- TRACKS -->
+  <section class="section" id="tracks">
+    <div class="wrap center">
+      <span class="eyebrow">Step 1</span>
+      <h2>Pick your class. Get your quest path.</h2>
+      <p class="muted" style="max-width:620px;margin:0 auto">Every course is matched to a class band and the Cambridge stage behind it, so nobody gets bored and nobody gets lost.</p>
+      <div class="class-picker" id="classPicker"></div>
+    </div>
+    <div class="wrap grid grid-3" id="trackGrid">
+      <div class="card skeleton" style="height:320px"></div><div class="card skeleton" style="height:320px"></div><div class="card skeleton" style="height:320px"></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" style="background:var(--ink);color:#fff;border-block:var(--border)">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:40px">
+        <span class="eyebrow" style="color:var(--ink)">How it works</span>
+        <h2>Less lecture. More <span style="color:var(--lime)">“I made that!”</span></h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="card step"><div class="num bg-sun">1</div><h3>Pick a quest</h3><p class="muted">Short lessons for your class. Five to fifteen minutes each, so they fit after school.</p></div>
+        <div class="card step"><div class="num bg-sky">2</div><h3>Play &amp; code</h3><p class="muted">Steer robots, flip binary switches, run real Python and build web pages right in the lesson.</p></div>
+        <div class="card step"><div class="num bg-lime">3</div><h3>Earn XP &amp; badges</h3><p class="muted">Quizzes, streaks and a leaderboard keep the momentum going. Level 1 Newbie to Legend.</p></div>
+        <div class="card step"><div class="num bg-pink">4</div><h3>Beat the boss</h3><p class="muted">Projects for the young ones, exam-style practice for O Level. That's where the real skill shows.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARENTS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:36px">
+        <span class="eyebrow">For parents</span>
+        <h2>Fun for them. Clear for you.</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="card flat"><div class="feature-icon">🎓</div><h3>Cambridge-aligned</h3><p class="muted small">Paths follow Cambridge Primary &amp; Lower Secondary Computing, then the O Level 2210 / IGCSE 0478 syllabus.</p></div>
+        <div class="card flat"><div class="feature-icon">📈</div><h3>Visible progress</h3><p class="muted small">XP, quests done and quiz scores live in your child's dashboard. No guessing how it's going.</p></div>
+        <div class="card flat"><div class="feature-icon">🛡️</div><h3>Safe &amp; ad-free</h3><p class="muted small">No ads, no chat with strangers. The leaderboard shows first names only.</p></div>
+        <div class="card flat"><div class="feature-icon">👋</div><h3>A real teacher</h3><p class="muted small">One teacher who knows every student. Questions get answered on WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing" style="padding-top:20px">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:36px">
+        <span class="eyebrow">Pricing</span>
+        <h2>Start free. Go Pro when you're hooked.</h2>
+      </div>
+      <div class="grid grid-3" style="align-items:stretch">
+        <div class="card">
+          <span class="chip chip-mint">Free forever</span>
+          <h3 style="margin-top:14px">Starter</h3>
+          <div class="price">৳0</div>
+          <ul class="check-list">
+            <li>Starter quests in every course</li>
+            <li>Code Playground (Python + web)</li>
+            <li>XP, streaks, badges &amp; leaderboard</li>
+            <li>No card needed</li>
+          </ul>
+          <a class="btn btn-white" href="/learn" style="width:100%">Play free</a>
+        </div>
+        <div class="card bg-lime plan-pop" style="box-shadow:var(--shadow-lg)">
+          <span class="chip chip-ink">Most popular</span>
+          <h3 style="margin-top:14px">Pro course</h3>
+          <div class="price"><span id="proFrom">৳1,500</span> <small>one-time · per course</small></div>
+          <ul class="check-list">
+            <li>Every quest in the course, including advanced</li>
+            <li>Projects &amp; boss levels</li>
+            <li>O Level exam-style practice &amp; trace tables</li>
+            <li>Pay by bKash or Nagad</li>
+          </ul>
+          <a class="btn btn-ink" href="/learn" style="width:100%">Choose a course</a>
+        </div>
+        <div class="card">
+          <span class="chip chip-pink">Live classes</span>
+          <h3 style="margin-top:14px">Tuition</h3>
+          <div class="row" style="align-items:baseline;gap:8px"><div class="price">৳<span data-s="online_fee">3,500</span></div><small style="font-weight:700">online / month</small></div>
+          <div class="row" style="align-items:baseline;gap:8px;margin-top:6px"><div class="price" style="font-size:1.8rem">৳<span data-s="onsite_fee">5,000</span></div><small style="font-weight:700">onsite / month</small></div>
+          <ul class="check-list">
+            <li>Live 1:1 or small group</li>
+            <li>Pro access to your class course included</li>
+            <li>Homework feedback &amp; parent updates</li>
+          </ul>
+          <a class="btn btn-pink" href="/tuition" style="width:100%">Book a trial class</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHER -->
+  <section class="section" id="teacher">
+    <div class="wrap teacher">
+      <div class="teacher-photo" id="teacherPhoto">👨‍🏫</div>
+      <div>
+        <span class="eyebrow">Meet your teacher</span>
+        <h2 data-s="teacher_name">Your Name</h2>
+        <p style="font-weight:800" data-s="teacher_title"></p>
+        <p class="muted" data-s="teacher_bio" style="font-size:1.08rem"></p>
+        <div class="row">
+          <a class="btn btn-lg" data-s-href="whatsapp" href="/tuition" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+          <a class="btn btn-lg btn-white" href="/tuition">See class options</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="padding-top:20px">
+    <div class="wrap" style="max-width:820px">
+      <div class="center" style="margin-bottom:30px"><span class="eyebrow">FAQ</span><h2>Questions parents ask</h2></div>
+      <div class="faq">
+        <details><summary>Is it really free to start?</summary><div>Yes. Every course has free starter quests with XP and badges. You only pay if you want the full course or live classes.</div></details>
+        <details><summary>Which course should my child start with?</summary><div>Pick their class above and we'll highlight the matching course. If they already code a bit, they can try the next course's free quests and see how it feels.</div></details>
+        <details><summary>Do we need to install anything?</summary><div>No. Python and the web editor run inside the browser. A laptop or desktop is best for Class 4 and up; younger kids are fine on a tablet.</div></details>
+        <details><summary>How do I pay for a Pro course?</summary><div>Send the course fee with bKash or Nagad "Send Money", then enter the Transaction ID on the course page. The course unlocks once the payment is verified, usually within a few hours.</div></details>
+        <details><summary>Is this an official Cambridge course?</summary><div>The lessons follow Cambridge curriculum frameworks and the O Level Computer Science 2210 syllabus, but this is an independent tutoring platform and isn't affiliated with or endorsed by Cambridge.</div></details>
+        <details><summary>What's the difference between online and onsite tuition?</summary><div>Online classes run live on Google Meet or Zoom. Onsite classes are in person at <span data-s="onsite_location">Dhaka</span>. Both include Pro access to the student's class course.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="wrap">
+      <div class="card bg-sun center" style="padding:48px 24px;box-shadow:var(--shadow-lg)">
+        <h2>Your first quest takes 5 minutes.</h2>
+        <p style="font-weight:700">No sign-up needed to try. Create a free account to save your XP.</p>
+        <a class="btn btn-lg btn-ink" href="/learn">Let's go 🚀</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/home.js"></script>
+</body>
+</html>

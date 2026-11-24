@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fff6e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<title>Log in or join free · ByteQuest</title>
+<meta name="robots" content="noindex">
+</head>
+<body>
+<div id="app-nav"></div>
+<main class="auth-wrap">
+  <div class="card auth-card" style="box-shadow:var(--shadow-lg)">
+    <div class="tabs" role="tablist">
+      <button data-mode="signup" role="tab">🚀 Join free</button>
+      <button data-mode="login" role="tab">🔑 Log in</button>
+    </div>
+
+    <form id="signupForm" class="hide" novalidate>
+      <h2 style="margin-bottom:6px">Create your player 🎮</h2>
+      <p class="muted small" id="guestNote">Save XP, streaks and badges. Parents: please create the account together with younger kids.</p>
+      <div class="field"><label for="suName">Student's name</label><input class="input" id="suName" name="name" autocomplete="name" required maxlength="80"></div>
+      <div class="field"><label for="suClass">Class</label><select class="input" id="suClass" name="class_level" required></select></div>
+      <div class="field"><label for="suEmail">Email</label><input class="input" id="suEmail" name="email" type="email" autocomplete="email" required><span class="hint">A parent's email is fine.</span></div>
+      <div class="field"><label for="suPhone">Parent's WhatsApp (optional)</label><input class="input" id="suPhone" name="phone" inputmode="tel" placeholder="01XXXXXXXXX"></div>
+      <div class="field"><label for="suPass">Password</label><input class="input" id="suPass" name="password" type="password" autocomplete="new-password" minlength="8" required><span class="hint">At least 8 characters.</span></div>
+      <div class="form-error hide" data-err></div>
+      <button class="btn btn-lg" type="submit" style="width:100%">Create account 🚀</button>
+    </form>
+
+    <form id="loginForm" class="hide" novalidate>
+      <h2 style="margin-bottom:6px">Welcome back 👋</h2>
+      <p class="muted small">Your streak missed you.</p>
+      <div class="field"><label for="liEmail">Email</label><input class="input" id="liEmail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="liPass">Password</label><input class="input" id="liPass" name="password" type="password" autocomplete="current-password" required></div>
+      <div class="form-error hide" data-err></div>
+      <button class="btn btn-lg" type="submit" style="width:100%">Log in ➜</button>
+      <p class="small muted" style="margin:14px 0 0">Forgot your password? <a id="forgotLink" href="/tuition" target="_blank" rel="noopener">Message your teacher on WhatsApp</a> and it'll be reset for you.</p>
+    </form>
+  </div>
+</main>
+<div id="app-footer"></div>
+<script type="module" src="/js/pages/login.js"></script>
+</body>
+</html>
